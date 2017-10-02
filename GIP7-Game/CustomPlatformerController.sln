@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{830E6C75-F533-F33F-0D5E-42808824A6F3}") = "CustomPlatformerController", "Assembly-CSharp.csproj", "{7B9A7CBD-37B8-CE42-A00F-D95C634595FC}"
+EndProject
+Project("{830E6C75-F533-F33F-0D5E-42808824A6F3}") = "CustomPlatformerController", "Assembly-CSharp-Editor.csproj", "{C1A942AF-85A1-C601-8E8B-168998B5C36E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B9A7CBD-37B8-CE42-A00F-D95C634595FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9A7CBD-37B8-CE42-A00F-D95C634595FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9A7CBD-37B8-CE42-A00F-D95C634595FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9A7CBD-37B8-CE42-A00F-D95C634595FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1A942AF-85A1-C601-8E8B-168998B5C36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A942AF-85A1-C601-8E8B-168998B5C36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A942AF-85A1-C601-8E8B-168998B5C36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1A942AF-85A1-C601-8E8B-168998B5C36E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
