@@ -39,7 +39,7 @@ namespace Assets.Scripts.Base
             }
         }
 
-        public const int DEFAULT_LEVEL_AMOUNT = 5;
+        public const int DEFAULT_LEVEL_AMOUNT = 1;
         public const string STATSSCENE_NAME = "stats";
         public const string RANDOMLEVEL_NAME = "level";
         public const string OPTIONSCENE_NAME = "options";
@@ -52,7 +52,7 @@ namespace Assets.Scripts.Base
         /// </summary>
         public static void LoadShop()
         {
-            SceneManager.LoadScene(FindLevel(SHOPSCENE_NAME));
+            //SceneManager.LoadScene(FindLevel(SHOPSCENE_NAME));
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Assets.Scripts.Base
         /// </summary>
         public static void LoadTutorial()
         {
-            SceneManager.LoadScene(FindLevel(TUTORIALSCENE_NAME));
+            //SceneManager.LoadScene(FindLevel(TUTORIALSCENE_NAME));
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Assets.Scripts.Base
         /// </summary>
         public static void LoadStatistics()
         {
-            SceneManager.LoadScene(FindLevel(STATSSCENE_NAME));
+            //SceneManager.LoadScene(FindLevel(STATSSCENE_NAME));
         }
 
         /// <summary>
@@ -219,8 +219,9 @@ namespace Assets.Scripts.Base
         /// </summary>
         public static void LoadRandomLevel()
         {
-            List<int> selectable = FindLevels(RANDOMLEVEL_NAME);
-            SceneManager.LoadScene(selectable[Random.Range(0, selectable.Count - 1)]);
+            //List<int> selectable = FindLevels(RANDOMLEVEL_NAME);
+            //SceneManager.LoadScene(selectable[Random.Range(0, selectable.Count - 1)]);
+            SceneManager.LoadScene(1);
         }
 
         /// <summary>

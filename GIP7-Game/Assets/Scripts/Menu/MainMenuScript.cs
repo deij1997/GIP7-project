@@ -15,7 +15,8 @@ public class MainMenuScript : MonoBehaviour
     public void StartNewPlaythrough()
     {
         //Forces a new playthrough
-        LevelLoader.NewPlayThrough(true);
+        //LevelLoader.NewPlayThrough(true);
+        LevelLoader.LoadRandomLevel();
         if (SoundManager.Instance != null)
         {
             SoundManager.Instance.PlayButtonClickSound();

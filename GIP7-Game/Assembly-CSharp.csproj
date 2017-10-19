@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7B9A7CBD-37B8-CE42-A00F-D95C634595FC}</ProjectGuid>
+    <ProjectGuid>{E58856D2-A877-D9ED-1261-AEE1F2057D75}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -72,9 +72,11 @@
      <Compile Include="Assets\Scripts\CPI\VirtualInput.cs" />
      <Compile Include="Assets\Scripts\CanvasScript.cs" />
      <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\Interactables\KeyController.cs" />
      <Compile Include="Assets\Scripts\Controllers\Interactables\LeverController.cs" />
      <Compile Include="Assets\Scripts\Controllers\Interactables\MontyController.cs" />
      <Compile Include="Assets\Scripts\Controllers\Interactables\NPCController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\Interactables\TimerScript.cs" />
      <Compile Include="Assets\Scripts\Controllers\MovingController\BaseController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MovingController\CircleMovementController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MovingController\PlatformController.cs" />
@@ -103,6 +105,7 @@
      <Compile Include="Assets\Scripts\Stats\GameStats.cs" />
      <Compile Include="Assets\Scripts\Stats\StatsSceneManager.cs" />
      <Compile Include="Assets\SpriteManager.cs" />
+     <Compile Include="Assets\VisibilityChangeScript.cs" />
      <None Include="Assets\Scripts\Shaders\SpritesTile.shader" />
      <None Include="Assets\Resources\Levels.txt" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />

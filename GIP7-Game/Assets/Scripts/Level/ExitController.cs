@@ -107,4 +107,9 @@ public class ExitController : MonoBehaviour
             gameStats.Save();
         }
     }
+
+    public void Mainmenu()
+    {
+        LevelLoader.LoadMainMenu();
+    }
 }

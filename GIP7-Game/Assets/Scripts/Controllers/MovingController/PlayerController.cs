@@ -17,6 +17,7 @@ public class PlayerController : BaseController
     private GameObject interactable;
     private GameObject exit;
     private bool interactionPossibleSoundPlayed;
+    public bool hasKey = false;
 
     public GameObject canvas;
 
@@ -91,7 +92,8 @@ public class PlayerController : BaseController
         if (interactable != null)
         {
             if (interactable.CompareTag("NPC")) interactable.GetComponent<NPCController>().Talk();
-            if (interactable.CompareTag("Lever")) interactable.GetComponent<LeverController>().Hit();
+            if (interactable.CompareTag("Key")) interactable.GetComponent<KeyController>().Hit();
+            if (interactable.CompareTag("Lever") && hasKey == true) interactable.GetComponent<LeverController>().Hit();
         }
     }
 
@@ -113,7 +115,8 @@ public class PlayerController : BaseController
                 exit = hit.transform.gameObject;
                 if (exit.CompareTag("Finish"))
                 {
-                    exit.GetComponent<ExitController>().NextLevel();
+                    //exit.GetComponent<ExitController>().NextLevel();
+                    exit.GetComponent<ExitController>().Mainmenu();
                 }
                 return;
             }
