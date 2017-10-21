@@ -87,6 +87,36 @@ namespace Assets.Scripts.Base
             SceneManager.LoadScene(FindLevel(OPTIONSCENE_NAME));
         }
 
+        public static void LoadInbetweenlevel()
+        {
+            //SceneManager.LoadScene();
+        }
+
+        public static void LoadLevel2()
+        {
+            //SceneManager.LoadScene();
+        }
+
+        public static void LoadLevel3()
+        {
+            //SceneManager.LoadScene();
+        }
+
+        public static void LoadLevel4()
+        {
+            //SceneManager.LoadScene();
+        }
+
+        public static void LoadLevel5()
+        {
+            //SceneManager.LoadScene();
+        }
+
+        public static void LoadLevel6()
+        {
+            //SceneManager.LoadScene();
+        }
+
         /// <summary>
         /// Alternative for LoadRandomLevelSet(bool, true, DEFAULT_LEVEL_AMOUNT, true);
         /// Creates a new playthrough

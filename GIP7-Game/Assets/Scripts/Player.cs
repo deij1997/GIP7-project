@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
 	public PlayerInfo playerInfo;
 
-	private Vector3 velocity;
+	public Vector3 velocity;
 	private float velocityTarget;
 	private float smoothVelocity;
 
@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
 	public Sprite walk1;
 	public Sprite walk2;
 	public Sprite jump;
+
+    public int health;
 
 	private float spriteTimer = 0;
 	private float lastJump = 0;
@@ -164,9 +166,34 @@ public class Player : MonoBehaviour
 	/// </summary>
 	private void CheckYBump()
 	{
+        //Get the velocity of the player before checking for a collision
+        float terminalvelocity = velocity.y;
+
 		//If the player is colliding above or below, remove his speed
-		if (playerController.collInfo.below || playerController.collInfo.above) velocity.y = 0;
+        if (playerController.collInfo.below || playerController.collInfo.above)
+        {
+            velocity.y = 0;
+            if (terminalvelocity < -25)
+            {
+                DamagePlayer(5);
+            }
+        }
 	}
+
+    public void DamagePlayer(int amount)
+    {
+        health = health - amount;
+
+        CheckPlayerDeath();
+    }
+
+    public void CheckPlayerDeath()
+    {
+        if (health <= 0)
+        {
+            LevelLoader.LoadMainMenu();
+        }
+    }
 
 	public void PlatformMove(Vector3 velocity)
 	{

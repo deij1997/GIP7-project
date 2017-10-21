@@ -19145,6 +19145,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988211335643094, guid: 67cfda0a2d2d33f47a739454c54d8e4a,
+        type: 2}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67cfda0a2d2d33f47a739454c54d8e4a, type: 2}
   m_IsPrefabParent: 0
