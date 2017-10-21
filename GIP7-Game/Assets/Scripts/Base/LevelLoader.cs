@@ -94,28 +94,27 @@ namespace Assets.Scripts.Base
 
         public static void LoadLevel2()
         {
-            //SceneManager.LoadScene();
-            LoadMainMenu();
+            SceneManager.LoadScene("d1level_2");
         }
 
         public static void LoadLevel3()
         {
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene("d1level_3");
         }
 
         public static void LoadLevel4()
         {
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene("d1level_4");
         }
 
         public static void LoadLevel5()
         {
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene("d1level_5");
         }
 
         public static void LoadLevel6()
         {
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene("d1level_6");
         }
 
         /// <summary>

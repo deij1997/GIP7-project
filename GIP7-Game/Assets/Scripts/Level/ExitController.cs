@@ -143,6 +143,10 @@ public class ExitController : MonoBehaviour
             {
                 LevelLoader.LoadLevel6();
             }
+            else if (nextLevel == 7)
+            {
+                LevelLoader.LoadMainMenu();
+            }
         }
     }
 }
