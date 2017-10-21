@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/MainMenuScene.unity
   - enabled: 1
     path: Assets/_Scenes/Levels/d1level_1.unity
+  - enabled: 1
+    path: Assets/_Scenes/transitions/Transition1.unity

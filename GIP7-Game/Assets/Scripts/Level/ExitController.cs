@@ -15,6 +15,8 @@ public class ExitController : MonoBehaviour
 
     public static bool endLevelSoundPlayed;
 
+    public int nextLevel;
+    public bool needsToLoadInbetween;
     private void Awake()
     {
         if (endGamePrefab == null)
@@ -111,5 +113,36 @@ public class ExitController : MonoBehaviour
     public void Mainmenu()
     {
         LevelLoader.LoadMainMenu();
+    }
+
+    public void LoadNextLevel()
+    {
+        if (needsToLoadInbetween == true)
+        {
+            LevelLoader.LoadInbetweenlevel(nextLevel);
+        }
+        else if (needsToLoadInbetween == false)
+        {
+            if (nextLevel == 2)
+            {
+                LevelLoader.LoadLevel2();
+            }
+            else if (nextLevel == 3)
+            {
+                LevelLoader.LoadLevel3();
+            }
+            else if (nextLevel == 4)
+            {
+                LevelLoader.LoadLevel4();
+            }
+            else if (nextLevel == 5)
+            {
+                LevelLoader.LoadLevel5();
+            }
+            else if (nextLevel == 6)
+            {
+                LevelLoader.LoadLevel6();
+            }
+        }
     }
 }

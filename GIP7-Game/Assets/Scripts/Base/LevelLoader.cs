@@ -87,14 +87,15 @@ namespace Assets.Scripts.Base
             SceneManager.LoadScene(FindLevel(OPTIONSCENE_NAME));
         }
 
-        public static void LoadInbetweenlevel()
+        public static void LoadInbetweenlevel(int nextlevel)
         {
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene("Transition" + (nextlevel - 1).ToString());
         }
 
         public static void LoadLevel2()
         {
             //SceneManager.LoadScene();
+            LoadMainMenu();
         }
 
         public static void LoadLevel3()

@@ -116,7 +116,7 @@ public class PlayerController : BaseController
                 if (exit.CompareTag("Finish"))
                 {
                     //exit.GetComponent<ExitController>().NextLevel();
-                    exit.GetComponent<ExitController>().Mainmenu();
+                    exit.GetComponent<ExitController>().LoadNextLevel();
                 }
                 return;
             }
