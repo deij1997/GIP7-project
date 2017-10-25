@@ -93,7 +93,14 @@ public class PlayerController : BaseController
         {
             if (interactable.CompareTag("NPC")) interactable.GetComponent<NPCController>().Talk();
             if (interactable.CompareTag("Key")) interactable.GetComponent<KeyController>().Hit();
-            if (interactable.CompareTag("Lever") && hasKey == true) interactable.GetComponent<LeverController>().Hit();
+            if (interactable.CompareTag("Lever") && interactable.GetComponent<LeverController>().requiresKey == true)
+            {
+                if (interactable.CompareTag("Lever") && hasKey == true) interactable.GetComponent<LeverController>().Hit();
+            }
+            else if (interactable.CompareTag("Lever") && interactable.GetComponent<LeverController>().requiresKey == false)
+            {
+                if (interactable.CompareTag("Lever")) interactable.GetComponent<LeverController>().Hit();
+            }
         }
     }
 

@@ -12,6 +12,7 @@ public class LeverController : MonoBehaviour {
     public PlayerController playerControl;
     public float time;
     public float targetTime;
+    public bool requiresKey;
 
     void awake()
     {
