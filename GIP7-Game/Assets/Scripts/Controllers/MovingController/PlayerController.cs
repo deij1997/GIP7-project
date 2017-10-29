@@ -58,7 +58,7 @@ public class PlayerController : BaseController
         //Update the raycast and reset collissions
         rayCaster.UpdateRayCastOrigins(InnerBounds());
         collInfo.Reset();
-
+        
         //Handle the collissions for both horizontal as vertical
         HandleCollision(ref velocity);
 

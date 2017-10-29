@@ -191,7 +191,9 @@ public class Player : MonoBehaviour
     {
         if (health <= 0)
         {
-            LevelLoader.LoadMainMenu();
+
+            LevelLoader.LoadPlayingLevel();
+            //LevelLoader.LoadMainMenu();
         }
     }
 

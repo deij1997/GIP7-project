@@ -117,6 +117,12 @@ namespace Assets.Scripts.Base
             SceneManager.LoadScene("d1level_6");
         }
 
+        public static void LoadPlayingLevel()
+        {
+            Scene toLoad = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(toLoad.name);
+        }
+
         /// <summary>
         /// Alternative for LoadRandomLevelSet(bool, true, DEFAULT_LEVEL_AMOUNT, true);
         /// Creates a new playthrough

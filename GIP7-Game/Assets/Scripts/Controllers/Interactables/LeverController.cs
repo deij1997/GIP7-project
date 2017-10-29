@@ -13,6 +13,7 @@ public class LeverController : MonoBehaviour {
     public float time;
     public float targetTime;
     public bool requiresKey;
+    public bool shouldRunTimer = false;
 
     void awake()
     {
@@ -40,7 +41,9 @@ public class LeverController : MonoBehaviour {
                 SoundManager.Instance.ObjectSounds[0].PlayAudioClip(1);
             }
 
+            Debug.Log("starting timer in hit function");
             StartTimer(time);
+            shouldRunTimer = true;
 
             /*
             foreach (ChangingObject cObject in objectList)
@@ -65,24 +68,28 @@ public class LeverController : MonoBehaviour {
 
     void Update()
     {
-
-        targetTime -= Time.deltaTime;
-
-        if (targetTime <= 0.0f)
+        if (shouldRunTimer == true)
         {
-            timerEnded();
-        }
+            targetTime -= Time.deltaTime;
 
+            if (targetTime <= 0.0f)
+            {
+                timerEnded();
+            }
+        }
     }
 
     public void StartTimer(float seconds)
     {
         targetTime = seconds;
+        Debug.Log("timer started");
     }
 
     void timerEnded()
     {
         //do your stuff here.
+        shouldRunTimer = false;
+
         playerControl.hasKey = false;
 
         VisibilityChangeScript.activate = true;
