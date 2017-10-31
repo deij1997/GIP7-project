@@ -24,6 +24,7 @@ public class CanvasScript : MonoBehaviour
 	public Sprite Fight;
 	public Sprite Flight;
 	public Sprite Confront;
+    public Text HealthNumberText;
 
 	void Start()
 	{
@@ -90,4 +91,9 @@ public class CanvasScript : MonoBehaviour
 		if (solution == NPCController.SolutionTypes.Flight || solution == NPCController.SolutionTypes.Ignore) EmotionField.sprite = Flight;
 		if (solution == NPCController.SolutionTypes.Confrontation) EmotionField.sprite = Confront;
 	}
+
+    public void SetHealthNumber(int health)
+    {
+        HealthNumberText.text = health.ToString();
+    }
 }

@@ -90,7 +90,10 @@ public class LeverController : MonoBehaviour {
         //do your stuff here.
         shouldRunTimer = false;
 
-        playerControl.hasKey = false;
+        if (requiresKey == true)
+        {
+            playerControl.hasKey = false;
+        }
 
         VisibilityChangeScript.activate = true;
 

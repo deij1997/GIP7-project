@@ -27,7 +27,9 @@ public class Player : MonoBehaviour
 	public Sprite walk2;
 	public Sprite jump;
 
-    public int health;
+    public int health = 10;
+
+    private CanvasScript cscript = null;
 
 	private float spriteTimer = 0;
 	private float lastJump = 0;
@@ -51,6 +53,10 @@ public class Player : MonoBehaviour
 	void Start()
 	{
 		soundManager = GameObject.FindObjectOfType<SoundManager>();
+
+        cscript = playerController.canvas.GetComponent<CanvasScript>();
+        cscript.SetHealthNumber(health);
+        //CanvasScript.SetHealthNumber(health);
 	}
 
 	void Update()
@@ -183,6 +189,9 @@ public class Player : MonoBehaviour
     public void DamagePlayer(int amount)
     {
         health = health - amount;
+
+        cscript.SetHealthNumber(health);
+        //CanvasScript.SetHealthNumber(health);
 
         CheckPlayerDeath();
     }
